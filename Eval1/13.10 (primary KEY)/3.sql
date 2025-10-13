@@ -25,6 +25,13 @@ VALUES(
 	'Sydorenko',
 	'info@gmail.com'
 	);
++--------------+-----------+--------+-----------+----------------+
+| iditificador | id        | nombre | apellidos | email          |
++--------------+-----------+--------+-----------+----------------+
+|            1 | 123456789 | Bohdan | Sydorenko | info@gmail.com |
+|            2 | 123456789 | Bohdan | Sydorenko | info@gmail.com |
++--------------+-----------+--------+-----------+----------------+
+
 	
 ejemplo 2020600
 
@@ -36,3 +43,10 @@ VALUES(
 	'Sydorenko',
 	'correincorecto'
 	);
++--------------+-----------+--------+-----------+----------------+
+| iditificador | id        | nombre | apellidos | email          |
++--------------+-----------+--------+-----------+----------------+
+|            1 | 123456789 | Bohdan | Sydorenko | info@gmail.com |
+|            2 | 123456789 | Bohdan | Sydorenko | info@gmail.com |
+|            3 | 123456789 | Bohdan | Sydorenko | correincorecto |
++--------------+-----------+--------+-----------+----------------+
