@@ -1,0 +1,16 @@
+Ejercicio 2-1
+Diseño conceptual
+Recuerda que, aunque no forme parte del enunciado, todos los trabajos se deben presentar en la memoria correspondiente. En esta, se darán lugar y valorará, tanto la estructura con los apartados correspondientes necesarios, como el contenido y dedicación. El formato de entrega debe ser en PDF
+Parte 1: Representa mediante el modelo conceptual, la información que se halla comprendida dentro de cada uno de los siguientes requisitos.
+Es importante, que no relaciones nada, únicamente se busca representar gráficamente, los tipo de entidad, sus tributos y los tipos diferentes de atributos.
+
+•	Requisito 1: El modelo conceptual deberá representar la entidad EMPLEADO, con el atributo principal codEmp, un atributo secundario dni, atributos simples como nombre, ap1 y ap2, así como un atributo compuesto cuentaBancaria, subdividido en banco, sucursal, dígitos de control y número de cuenta.
+
+•	Requisito 2: Se incorporará la entidad MOVIL, diferenciada mediante el atributo principal codMov, con atributos simples modelo, precioCoste y precioVenta. Además, se podrá incluir un atributo derivado margen, calculado a partir de la diferencia entre precioVenta y precioCoste.
+
+•	Requisito 3: La entidad CLIENTE deberá estar definida con el atributo principal dni, atributos simples nombre, ap1 y ap2, y un atributo opcional email, que puede tomar valores nulos si no se dispone de dicha información al momento del registro.
+
+•	Requisito 4: La entidad PROVEEDOR deberá incluir el atributo principal codProv, un atributo simple nombre, y un atributo multivaluado telefonos, que permitirá almacenar más de un número de contacto por proveedor.
+
+•	Requisito 5: La entidad FABRICANTE será modelada con el atributo principal fabricante y un atributo simple telefono. Para mantener la integridad, se definirá el dominio del atributo telefono restringido a valores numéricos de una longitud fija.
+

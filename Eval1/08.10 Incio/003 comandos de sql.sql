@@ -1,5 +1,13 @@
 --- CRETE
 
+CREATE TABLE cliente (
+    id INT(9),
+    nombre VARCHAR(100),
+    apellidos VARCHAR(255),
+    email VARCHAR(255)
+);
+
+
 INSERT INTO clientes VALUES(
     '123456789',
     'Bohdan',
