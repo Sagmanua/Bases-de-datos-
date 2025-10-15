@@ -31,6 +31,7 @@ ALTER TABLE clientes
     )
   );
 
+
 Otro variante
 
 ALTER TABLE clientes
