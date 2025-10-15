@@ -37,11 +37,11 @@ ejemplo 2020600
 
 INSERT INTO clientes
 VALUES(
-	NULL,
-	'987654321',
+	4,
+	'12345678Z',
 	'Bohdan1',
 	'Sydorenko1',
-	'bohad'
+	'info@gamil.com'
 	);
 +--------------+-----------+--------+-----------+----------------+
 | iditificador | id        | nombre | apellidos | email          |
