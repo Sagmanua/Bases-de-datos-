@@ -38,10 +38,10 @@ ejemplo 2020600
 INSERT INTO clientes
 VALUES(
 	NULL,
-	'123456789',
-	'Bohdan',
-	'Sydorenko',
-	'correincorecto'
+	'987654321',
+	'Bohdan1',
+	'Sydorenko1',
+	'bohad'
 	);
 +--------------+-----------+--------+-----------+----------------+
 | iditificador | id        | nombre | apellidos | email          |

@@ -1,0 +1,6 @@
+ALTER TABLE clientes
+	ADD CONSTRAINT comprobar_email
+	CHECK (email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$');
+
+DELETE FROM clientes WHERE inditificador = 4
+DELETE FROM clientes WHERE inditificador = (que tienene falla)
