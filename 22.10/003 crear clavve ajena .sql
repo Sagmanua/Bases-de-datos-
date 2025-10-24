@@ -1,0 +1,16 @@
+ALTER TABLE emails
+MODIFY COLUMN personas INT;
+
+ALTER TABLE emails
+ADD CONSTRAINT fk_email_personas
+FOREIGN KEY (personas) REFERENCES personas(idificador)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+
+ALTER TABLE emails
+ADD CONSTRAINT fk_email_personas
+FOREIGN KEY (personas)
+REFERENCES personas(idificador)
+ON DELETE CASCADE
+on UPDATE CASCADE;
