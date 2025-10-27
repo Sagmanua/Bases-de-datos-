@@ -47,17 +47,24 @@ telefono
 # Diagrama ERD de Escuela
 
 ```mermaid
-%% Example of sequence diagram
-  sequenceDiagram
-    Alice->>Bob: Hello Bob, how are you?
-    alt is sick
-    Bob->>Alice: Not so good 
-    else is well
-    Bob->>Alice: Feeling fresh like a daisy
-    end
-    opt Extra response
-    Bob->>Alice: Thanks for asking
-    end
+erDiagram
+    EMPRESA {
+        int id_empresa PK
+        string nombre_empresa
+        string direccion
+        string telefono
+    }
+
+    CLIENTE {
+        int dni PK
+        string nombre
+        string apellidos
+        string email
+        int id_empresa FK
+    }
+
+    EMPRESA ||--o{ CLIENTE : "tiene 1:N"
+
 ```
 
 
