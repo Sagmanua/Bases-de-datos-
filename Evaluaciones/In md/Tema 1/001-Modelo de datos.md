@@ -1,5 +1,10 @@
+# Introduce a practica 
+En este ejercioc nos vamos a hacer una bases de datos.Voy estudiar como usar Modelo de Datos,Diagrama Entidad relacion y Mysql.En parte my sql voy estudiar como crear bases de datos y Añade registros a las tablas correspondientes, por ejemplo, inserta algunos clientes con sus respectivos atributos.
+
+
+
 # 1. Introducción al Modelo de Datos
--
+
 
 Primero, identificamos las entidades y sus atributos según lo que mencionaste:
 
@@ -22,6 +27,8 @@ id_empresa (clave foránea que indica a qué empresa pertenece)
 
 # 2. Desarrollo del Modelo: Diagrama Entidad-Relación (ERD)
 ### Diagrama ERD de Escuela
+
+Ahora vamos hacer una Diagrama Entidad-Relación
 
 ```mermaid
 erDiagram
