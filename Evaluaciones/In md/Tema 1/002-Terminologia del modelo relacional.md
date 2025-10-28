@@ -78,12 +78,29 @@ CREATE TABLE Cliente (
     dni VARCHAR(10) PRIMARY KEY ,
     nombre VARCHAR(50) NOT NULL,
     apellidos VARCHAR(50) NOT NULL,
-    email VARCHAR(100),
+    email VARCHAR(100)
 );
-INSERT INTO Cliente VALUES 
-    ('12345678A', 'Juan', 'Pérez', 'juan.perez@email.com',),
-    ('87654321B', 'Ana', 'Gómez', 'ana.gomez@email.com',),
-    ('11223344C', 'Luis', 'Martínez', 'luis.martinez@email.com',);
+INSERT INTO
+  Cliente (dni, nombre, apellidos, email)
+VALUES
+  (
+    '12345678A',
+    'Juan',
+    'Pérez',
+    'juan.perez@email.com'
+  ),
+  (
+    '87654321B',
+    'Ana',
+    'Gómez',
+    'ana.gomez@email.com'
+  ),
+  (
+    '11223344C',
+    'Luis',
+    'Martínez',
+    'luis.martinez@email.com'
+  );
 ```
 
 # Conclusión enlazando con la actividad 
