@@ -1,3 +1,7 @@
+Create DATABASE 003_Tipos_de_datos;
+USE 003_Tipos_de_datos;
+
+
 ##1.-Indroduccion brece y contexalizacion
 ---
 

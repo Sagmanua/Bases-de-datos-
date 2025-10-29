@@ -77,7 +77,7 @@ WHERE dni ='11223344C';
 Create DATABASE 003_Tipos_de_datos;
 USE 003_Tipos_de_datos;
 CREATE TABLE Clientes (
-    dni VARCHAR(9) PRIMARY KEY ,
+    dninie VARCHAR(9) PRIMARY KEY ,
     nombre VARCHAR(50) NOT NULL,
     apellidos VARCHAR(255) NOT NULL,
     email VARCHAR(100)
