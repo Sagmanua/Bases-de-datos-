@@ -193,21 +193,8 @@ SELECT * FROM productos
 | 19 | Patito Sirena        | Patito mitad pez, mitad pato.                |   5.90 |    45 |
 | 20 | Patito Gigante       | Patito de goma de gran tamaño.               |  24.99 |     5 |
 
-
-
 ### Ahora voy a hacer una beckup de bases de datos 
-   
-
 sudo mysqldump -u root -p empresadam > copiadeseguridad.sql
-
-sudo mysqldump -u root -p 005_Restriccones_de_validacion > copiadeseguridad.sql
-
-
-
-
-
-
-
 # Codigo completa 
 ```
 USE empresadam;
