@@ -1,6 +1,5 @@
 # Introduce de la practica 
-
-
+En este practica vamos usar y aprender  CONSTRAN para hacer reglas en la tablas de bases tamboen añadiomos una columna nuevo y borar clomnas.Creamos una nuevo tabla de productos la aplicación de restricciones para garantizar la integridad de los datos y al final asegurando la preservacion de la informacion 
 
 #  Aplicación Práctica
 Cuando Mysql a installando esribe  `sudo mysql -u root -p` para conectar en la Mysql 
@@ -11,8 +10,6 @@ Cuando Mysql a installando esribe  `sudo mysql -u root -p` para conectar en la M
 ### Abre este bases de datos que luego puedo trabajar en este bases de datos 
 ```
 USE empresadam;
-
-
 ```
 ### Uso desribe para ver que columnas tiene y con que 
 DESCRIBE Clientes;
@@ -294,5 +291,5 @@ SELECT * FROM producto;
 ```
 # Conclusión enlazando con la actividad 
 
-
+La práctica permitió aplicar de manera práctica conceptos fundamentales de gestión de bases de datos, como la modificación de tablas, manejo de restricciones, creación de nuevas estructuras y realización de copias de seguridad. Estas tareas refuerzan la comprensión sobre la integridad de los datos y la organización eficiente de la información, tal como se planteó en la actividad.
 
