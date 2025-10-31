@@ -3,12 +3,10 @@
 #  Aplicación Práctica
 Cuando Mysql a installando esribe  `sudo mysql -u root -p` para conectar en la Mysql 
 
-### crate bases de datos 
+### boy a crear una  bases de datos 
 ```
 Create DATABASE biblioteca25;
-
 ```
-
 
 ### Abre este bases de datos que luego puedo trabajar en este bases de datos 
 
@@ -16,7 +14,7 @@ Create DATABASE biblioteca25;
 USE biblioteca25;
 ```
 
-### Tiene este bases de datos
+### Tiene este bases de datos or no 
 
 
 | DATABASE()   |
@@ -32,8 +30,12 @@ CREATE TABLE autores (
   pais VARCHAR(80)
 );
 ```
-
+### probar que todo gurdado corecta autores
+#### codigo
+``` 
 DESCRIBE autores
+```
+#### resulatado
 | Field  | Type         | Null | Key | Default | Extra          |
 |:--------:|:--------------:|:------:|:-----:|:---------:|:----------------:|
 | id     | int          | NO   | PRI | NULL    | auto_increment |
@@ -57,6 +59,13 @@ CREATE TABLE libros (
         ON DELETE RESTRICT
 );
 
+### probar que todo gurdado corecta en tabla libros 
+#### codigo
+
+```
+DESCRIBE libros;
+```
+#### resulatado
 
 | Field    | Type         | Null | Key | Default | Extra          |
 |:--------:|:--------------:|:------:|:-----:|:---------:|:----------------:|
@@ -66,7 +75,7 @@ CREATE TABLE libros (
 | precio   | decimal(8,2) | NO   |     | NULL    |                |
 | autor_id | int          | NO   | MUL | NULL    |                |
 
-
+### crear una tabla socios
 CREATE TABLE socios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -74,7 +83,13 @@ CREATE TABLE socios (
     fecha_alta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CHECK (email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')
 );
+### probar que todo gurdado corecta en tabla libros 
+#### codigo
 
+```
+DESCRIBE socios;
+```
+#### resulatado
 | Field      | Type         | Null | Key | Default           | Extra             |
 |:--------:|:--------------:|:------:|:-----:|:---------:|:----------------:|
 | id         | int          | NO   | PRI | NULL              | auto_increment    |
@@ -107,9 +122,13 @@ CREATE TABLE prestanos(
 
 );
 
-### 
+### probar que todo gurdado corecta en tabla libros 
+#### codigo
 
-DESCRIBE prestanos;
+```
+DESCRIBE prestanos ;
+```
+#### resulatado
 
 
 | Field            | Type      | Null | Key | Default           | Extra             |
@@ -122,9 +141,10 @@ DESCRIBE prestanos;
 | fecha_devolucion | timestamp | YES  |     | NULL              |                   |
 
 
-### 
+### otro variante para probar si todo corecta
+```
 SHOW INDEX FROM prestanos;
-
+```
 
 | Table     | Non_unique | Key_name       | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
 |:-----------:|:------------:|:----------------:|:--------------:|:-------------:|:-----------:|:-------------:|:----------:|:--------:|:------:|:------------:|:---------:|:---------------:|:---------:|:------------:|
@@ -134,72 +154,81 @@ SHOW INDEX FROM prestanos;
 | prestanos |          1 | fk_libro       |            1 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 
 
+### vale voy ver todos los tablas que creo 
 
-###
+
+| Tables_in_biblioteca25 |
+|:------------------------:|
+| autores                |
+| libros                 |
+| prestanos              |
+| socios                 |
+
+
+
+
+### cundo hace todo los tablas voy a insertae values en tablas 
+
+### Inseto values en tablas autores
 INSERT INTO autores (nombre) VALUES 
 ('Gabriel Garcia Marquez'),
 ('Isabel Allende'),
 ('J.K. Rowling');
 
-###
-SELECT * FROM autores;
+### resultado de inserto `SELECT * FROM autores;`
 
-+----+------------------------+------+
 | id | nombre                 | pais |
-+----+------------------------+------+
+|:----:|:------------------------:|:------:|
 |  1 | Gabriel Garcia Marquez | NULL |
 |  2 | Isabel Allende         | NULL |
 |  3 | J.K. Rowling           | NULL |
-+----+------------------------+------+
-
-### 
 
 
-
-
-+----+------------------------------------+-------------------+--------+----------+
-| id | titulo                             | isbn              | precio | autor_id |
-+----+------------------------------------+-------------------+--------+----------+
-|  1 | Cien Años de Soledad               | 978-3-16-148410-0 |  25.50 |        1 |
-|  2 | La Casa de los Espíritus           | 978-84-00-08955-9 |  20.00 |        2 |
-|  3 | Harry Potter y la Piedra Filosofal | 978-84-8004-123-4 |  30.00 |        3 |
-+----+------------------------------------+-------------------+--------+----------+
-
-
+### Inseto values en tablas libros
+```
 INSERT INTO libros (titulo, isbn, precio, autor_id) VALUES
 ('Cien Años de Soledad', '978-3-16-148410-0', 25.50, 1),
 ('La Casa de los Espíritus', '978-84-00-08955-9', 20.00, 2),
 ('Harry Potter y la Piedra Filosofal', '978-84-8004-123-4', 30.00, 3);
+```
+### resultado de inserto `SELCT * FROM libros;`
 
-SELCT * FROM libros; 
+| id | titulo                             | isbn              | precio | autor_id |
+|:----:|:------------------------------------:|:-------------------:|:--------:|:----------:|
+|  1 | Cien Años de Soledad               | 978-3-16-148410-0 |  25.50 |        1 |
+|  2 | La Casa de los Espíritus           | 978-84-00-08955-9 |  20.00 |        2 |
+|  3 | Harry Potter y la Piedra Filosofal | 978-84-8004-123-4 |  30.00 |        3 |
 
 
-
+### Inseto values en tablas libros socios
+```
 INSERT INTO socios (nombre, email, fecha_alta) VALUES
 ('Juan Perez', 'juan.perez@email.com', CURRENT_DATE),
 ('Maria Lopez', 'maria.lopez@email.com', CURRENT_DATE);
+```
+### resultado de inserto `SELCT * FROM socios;`
 
-+----+-------------+-----------------------+---------------------+
 | id | nombre      | email                 | fecha_alta          |
-+----+-------------+-----------------------+---------------------+
+|:----:|:-------------:|:-----------------------:|:---------------------:|
 |  1 | Juan Perez  | juan.perez@email.com  | 2025-10-31 00:00:00 |
 |  2 | Maria Lopez | maria.lopez@email.com | 2025-10-31 00:00:00 |
-+----+-------------+-----------------------+---------------------+
 
 
+### Inseto values en tablas libros prestanos
+```
 INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (1, 1, CURRENT_TIMESTAMP, NULL);
 
 INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (2, 2, '2025-10-01', '2025-10-15');
+```
 
-SELECT * FROM prestanos;
-+----+----------+----------+---------------------+---------------------+
+### resultado de inserto `SELCT * FROM prestanos;`
 | id | socio_id | libro_id | fecha_prestamo      | fecha_devolucion    |
-+----+----------+----------+---------------------+---------------------+
+|:----:|:----------:|:----------:|:---------------------:|:---------------------:|
 |  1 |        1 |        1 | 2025-10-31 11:48:50 | NULL                |
 |  2 |        2 |        2 | 2025-10-01 00:00:00 | 2025-10-15 00:00:00 |
-+----+----------+----------+---------------------+---------------------+
+
 
 
 # Codigo completa 
