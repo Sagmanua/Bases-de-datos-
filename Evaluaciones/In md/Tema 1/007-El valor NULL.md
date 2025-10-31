@@ -17,10 +17,17 @@ En esta práctica, se trabajará con la base de datos empresadam en MySQL para c
 USE empresadam;
 ```
 
-### 
+### voy a ver que tablas tiene y su nombre 
 ```
 SHOW TABLES;
 ```
+
+
+| Tables_in_empresadam |
+|:----------------------:|
+| Cliente              |
+| clientes             |
+
 
 ### crear tabla pedeidos
 ```
@@ -46,7 +53,7 @@ DESRIBE pedidos;
 
 
 
-### Inserta
+### Inserta values en la tabla pedidos
 ```
 INSERT INTO pedidos (numerodepedido, cliente, producto) VALUES ('P001', 'Cliente A', NULL);
 
