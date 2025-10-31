@@ -29,7 +29,7 @@ erDiagram
         int id_empresa FK
     }
 
-    PRESTANOS {
+    PRESTAMOS {
         int id PK
         string socio_id FK
         string apellidos
@@ -39,8 +39,8 @@ erDiagram
     }
 
     AUTORES ||--o{ LIBROS : "tiene 1:N"
-    PRESTANOS }o--o{ SOCIOS : "tiene M:N"
-    PRESTANOS }o--o{ LIBROS : "tiene M:N"
+    PRESTAMOS }o--o{ SOCIOS : "tiene M:N"
+    PRESTAMOS }o--o{ LIBROS : "tiene M:N"
     
 ```
 #  Aplicación Práctica
@@ -68,7 +68,7 @@ USE biblioteca25;
 ### crear tablas de autores
 ```
 CREATE TABLE autores (
-  id  INT(50) PRIMARY KEY AUTO_INCREMENT,
+  id  INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
   pais VARCHAR(80)
 );
@@ -142,8 +142,8 @@ DESCRIBE socios;
 
 
 
-### craeo tabla prestanos
-CREATE TABLE prestanos(
+### craeo tabla prestamos
+CREATE TABLE prestamos(
     id INT AUTO_INCREMENT PRIMARY KEY,
     socio_id INT NOT NULL,
     libro_id INT NOT NULL,
@@ -169,7 +169,7 @@ CREATE TABLE prestanos(
 #### codigo
 
 ```
-DESCRIBE prestanos ;
+DESCRIBE prestamos ;
 ```
 #### resulatado
 
@@ -186,15 +186,15 @@ DESCRIBE prestanos ;
 
 ### otro variante para probar si todo corecta
 ```
-SHOW INDEX FROM prestanos;
+SHOW INDEX FROM prestamos;
 ```
 
 | Table     | Non_unique | Key_name       | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment | Visible | Expression |
 |:-----------:|:------------:|:----------------:|:--------------:|:-------------:|:-----------:|:-------------:|:----------:|:--------:|:------:|:------------:|:---------:|:---------------:|:---------:|:------------:|
-| prestanos |          0 | PRIMARY        |            1 | id          | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
-| prestanos |          0 | uq_socio_libro |            1 | socio_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
-| prestanos |          0 | uq_socio_libro |            2 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
-| prestanos |          1 | fk_libro       |            1 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| prestamos |          0 | PRIMARY        |            1 | id          | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| prestamos |          0 | uq_socio_libro |            1 | socio_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| prestamos |          0 | uq_socio_libro |            2 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
+| prestamos |          1 | fk_libro       |            1 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 
 
 ### vale voy ver todos los tablas que creo `SHOW TABLES`
@@ -204,7 +204,7 @@ SHOW INDEX FROM prestanos;
 |:------------------------:|
 | autores                |
 | libros                 |
-| prestanos              |
+| prestamos              |
 | socios                 |
 
 
@@ -249,7 +249,7 @@ INSERT INTO socios (nombre, email, fecha_alta) VALUES
 ('Juan Perez', 'juan.perez@email.com', CURRENT_DATE),
 ('Maria Lopez', 'maria.lopez@email.com', CURRENT_DATE);
 ```
-### resultado de inserto `SELCT * FROM socios;`
+### resultado de inserto `SELECT * FROM socios;`
 
 | id | nombre      | email                 | fecha_alta          |
 |:----:|:-------------:|:-----------------------:|:---------------------:|
@@ -257,16 +257,16 @@ INSERT INTO socios (nombre, email, fecha_alta) VALUES
 |  2 | Maria Lopez | maria.lopez@email.com | 2025-10-31 00:00:00 |
 
 
-### Inseto values en tablas libros prestanos
+### Inseto values en tablas libros prestamos
 ```
-INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
+INSERT INTO prestamos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (1, 1, CURRENT_TIMESTAMP, NULL);
 
-INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
+INSERT INTO prestamos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (2, 2, '2025-10-01', '2025-10-15');
 ```
 
-### resultado de inserto `SELCT * FROM prestanos;`
+### resultado de inserto `SELCT * FROM prestamos;`
 | id | socio_id | libro_id | fecha_prestamo      | fecha_devolucion    |
 |:----:|:----------:|:----------:|:---------------------:|:---------------------:|
 |  1 |        1 |        1 | 2025-10-31 11:48:50 | NULL                |
@@ -279,7 +279,7 @@ INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VAL
 Create DATABASE biblioteca25;
 USE biblioteca25;
 CREATE TABLE autores (
-  id  INT(50) PRIMARY KEY AUTO_INCREMENT,
+  id  INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
   pais VARCHAR(80)
 );
@@ -288,7 +288,7 @@ CREATE TABLE libros (
     titulo VARCHAR(200) NOT NULL,
     isbn VARCHAR(20) NOT NULL UNIQUE,
     precio DECIMAL(8,2) NOT NULL CHECK (precio >= 0),
-    INT NOT NULL,
+    autor_id INT NOT NULL,
     CONSTRAINT fk_autor
         FOREIGN KEY (autor_id)
         REFERENCES autores(id)
@@ -302,7 +302,7 @@ CREATE TABLE socios (
     fecha_alta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     CHECK (email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$')
 );
-CREATE TABLE prestanos(
+CREATE TABLE prestamos(
     id INT AUTO_INCREMENT PRIMARY KEY,
     socio_id INT NOT NULL,
     libro_id INT NOT NULL,
@@ -323,8 +323,8 @@ CREATE TABLE prestanos(
     UNIQUE KEY uq_socio_libro (socio_id, libro_id)
 
 );
-DESCRIBE prestanos;
-SHOW INDEX FROM prestanos;
+DESCRIBE prestamos;
+SHOW INDEX FROM prestamos;
 SHOW TABLES;
 INSERT INTO autores (nombre) VALUES 
 ('Gabriel Garcia Marquez'),
@@ -335,16 +335,16 @@ INSERT INTO libros (titulo, isbn, precio, autor_id) VALUES
 ('Cien Años de Soledad', '978-3-16-148410-0', 25.50, 1),
 ('La Casa de los Espíritus', '978-84-00-08955-9', 20.00, 2),
 ('Harry Potter y la Piedra Filosofal', '978-84-8004-123-4', 30.00, 3);
-SELCT * FROM libros; 
+SELECT * FROM libros; 
 INSERT INTO socios (nombre, email, fecha_alta) VALUES
 ('Juan Perez', 'juan.perez@email.com', CURRENT_DATE),
 ('Maria Lopez', 'maria.lopez@email.com', CURRENT_DATE);
-INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
+INSERT INTO prestamos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (1, 1, CURRENT_TIMESTAMP, NULL);
 
-INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
+INSERT INTO prestamos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VALUES
 (2, 2, '2025-10-01', '2025-10-15');
-SELECT * FROM prestanos;
+SELECT * FROM prestamos;
 
 ```
 
