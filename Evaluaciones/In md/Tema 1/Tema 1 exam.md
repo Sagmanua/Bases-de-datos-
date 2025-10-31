@@ -1,5 +1,48 @@
 # Introduce de la practica 
+El objetivo de esta práctica es desarrollar una base de datos relacional denominada biblioteca25, que permita gestionar información sobre autores, libros, socios y préstamos. Esta actividad tiene como eje central el diseño y creación de tablas relacionadas, aplicando restricciones de integridad como claves primarias, claves foráneas, unicidad, y validaciones CHECK, así como la creación de índices, vistas y usuarios con permisos específicos.
 
+
+## Este es structura visual (diargarma)de bases de datos biblioteca25
+```mermaid
+erDiagram
+
+
+    AUTORES {
+        int id PK
+        string nombre 
+        string pais
+    }
+
+    LIBROS {
+        int id PK
+        string titulo  
+        string isbn 
+        decimal precio
+        int autor_id FK
+    }
+
+    SOCIOS {
+        int id PK
+        string nombre
+        string email
+        date fecha_alta
+        int id_empresa FK
+    }
+
+    PRESTANOS {
+        int id PK
+        string socio_id FK
+        string apellidos
+        string libro_id FK 
+        TIMESTAMP fecha_prestamo 
+        int id_empresa FK
+    }
+
+    AUTORES ||--o{ LIBROS : "tiene 1:N"
+    PRESTANOS }o--o{ SOCIOS : "tiene M:N"
+    PRESTANOS }o--o{ LIBROS : "tiene M:N"
+    
+```
 #  Aplicación Práctica
 Cuando Mysql a installando esribe  `sudo mysql -u root -p` para conectar en la Mysql 
 
@@ -154,7 +197,7 @@ SHOW INDEX FROM prestanos;
 | prestanos |          1 | fk_libro       |            1 | libro_id    | A         |           0 |     NULL |   NULL |      | BTREE      |         |               | YES     | NULL       |
 
 
-### vale voy ver todos los tablas que creo 
+### vale voy ver todos los tablas que creo `SHOW TABLES`
 
 
 | Tables_in_biblioteca25 |
@@ -245,7 +288,7 @@ CREATE TABLE libros (
     titulo VARCHAR(200) NOT NULL,
     isbn VARCHAR(20) NOT NULL UNIQUE,
     precio DECIMAL(8,2) NOT NULL CHECK (precio >= 0),
-    autor_id INT NOT NULL,
+    INT NOT NULL,
     CONSTRAINT fk_autor
         FOREIGN KEY (autor_id)
         REFERENCES autores(id)
@@ -282,6 +325,7 @@ CREATE TABLE prestanos(
 );
 DESCRIBE prestanos;
 SHOW INDEX FROM prestanos;
+SHOW TABLES;
 INSERT INTO autores (nombre) VALUES 
 ('Gabriel Garcia Marquez'),
 ('Isabel Allende'),
@@ -303,6 +347,10 @@ INSERT INTO prestanos (socio_id, libro_id, fecha_prestamo, fecha_devolucion) VAL
 SELECT * FROM prestanos;
 
 ```
+
+
+
 # Conclusión enlazando con la actividad 
+La realización de esta actividad permitió consolidar los conocimientos sobre modelado y gestión de bases de datos relacionales mediante la creación de la base biblioteca25. A lo largo del ejercicio se aplicaron principios de integridad de datos, como claves primarias, claves foráneas con acciones CASCADE o RESTRICT, restricciones CHECK, y unicidad, asegurando que la información se mantuviera coherente y confiable.
 
-
+Además, se diseñaron índices para optimizar las consultas, se creó una vista de préstamos activos para facilitar el seguimiento de los libros prestados y se implementó un usuario de solo lectura, reforzando buenas prácticas de seguridad
