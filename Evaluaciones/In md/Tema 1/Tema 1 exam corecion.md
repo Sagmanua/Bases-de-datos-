@@ -68,11 +68,32 @@ USE biblioteca25;
 ### crear tablas de autores
 ```
 CREATE TABLE autores (
+  id  INT(10);
+  nombre VARCHAR(100) NOT NULL,
+  pais VARCHAR(80)
+);
+```
+
+or 
+```
+CREATE TABLE autores (
   id  INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
   pais VARCHAR(80)
 );
 ```
+
+### quiro titrar la columna id 
+```
+ALTER TABLE autores DROP id;
+```
+### Ahora creo columna id 
+```
+ALTER TABÑE autors ADD COLUMN id INT
+auto_incermant PRIMARY KEY FIRST;
+```
+
+
 ### probar que todo gurdado corecta autores
 #### codigo
 ``` 
@@ -84,6 +105,34 @@ DESCRIBE autores
 | id     | int          | NO   | PRI | NULL    | auto_increment |
 | nombre | varchar(100) | NO   |     | NULL    |                |
 | pais   | varchar(80)  | YES  |     | NULL    |                |
+
+
+
+### Inseto values en tablas autores
+INSERT INTO autores (nombres) VALUES 
+('Gabriel Garcia Marquez'),
+('Isabel Allende'),
+('J.K. Rowling');
+
+### resultado de inserto `SELECT * FROM autores;`
+
+| id | nombre                 | pais |
+|:----:|:------------------------:|:------:|
+|  1 | Gabriel Garcia Marquez | NULL |
+|  2 | Isabel Allende         | NULL |
+|  3 | J.K. Rowling           | NULL |
+
+
+#### LEFT JOIN
+```
+CRETR VIEW vista_entradas AS
+SETECT
+libros.titulo,libros.isbn,libros.precio,libros
+autores.nombre,autores.pais
+FROM entradas 
+LEFT JOIN autores
+ON entradas.id_autor = autores.id
+```
 
 
 
@@ -212,19 +261,6 @@ SHOW INDEX FROM prestamos;
 
 ### cundo hace todo los tablas voy a insertae values en tablas 
 
-### Inseto values en tablas autores
-INSERT INTO autores (nombre) VALUES 
-('Gabriel Garcia Marquez'),
-('Isabel Allende'),
-('J.K. Rowling');
-
-### resultado de inserto `SELECT * FROM autores;`
-
-| id | nombre                 | pais |
-|:----:|:------------------------:|:------:|
-|  1 | Gabriel Garcia Marquez | NULL |
-|  2 | Isabel Allende         | NULL |
-|  3 | J.K. Rowling           | NULL |
 
 
 ### Inseto values en tablas libros
