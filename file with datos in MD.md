@@ -56,7 +56,7 @@ sudo mysql -u root -p
 erDiagram
     EMPRESA {
         int id_empresa PK
-        string nombre_empresa
+        string nombre_empresa 
         string direccion
         string telefono
     }
