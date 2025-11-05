@@ -1,18 +1,11 @@
-import subprocess
-
-usuario = "usuarioempresarial"
-password = "usuarioempresarial"
-base_datos = "portafolio"
-archivo_salida = "copia_de_seguridad.sql"
-
-comando = [
-    "mysqldump",
-    f"-u{usuario}",
-    f"-p{password}",
-    base_datos
-]
-
-with open(archivo_salida, "w") as salida:
-    subprocess.run(comando, stdout=salida, check=True)
-
-print(f"Copia de seguridad creada en {archivo_salida}")
+import mysql.connector
+try:
+    mysql.connector.connect(
+        host="localhost",
+        user="backupuser",
+        password="clave_segura",
+        database="mi_base"
+    )
+    print("✅ Conexión exitosa!")
+except Exception as e:
+    print("❌ Error:", e)
