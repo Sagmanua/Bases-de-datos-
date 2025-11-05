@@ -288,17 +288,45 @@ if opciondeinsetar == 2:
                         id_categoria = '''+id_categoria+'''
                     WHERE id_pieza = '''+id_pieza+'''
                 ''')
+```
+### Ahora boy a crear Actulaziones
+#### Empezar you tiene 2 tablas  `Pieza` y `Categoria` por eso voy a hacer yna Esoge para usario
+```
+ print("Escoge una opcion:")
+            print("1.Insertar en tabla de Categoria")
+            print("2.Insertar en tabla de Pieza")
+            opciondeinsetar = int(input("Escoge una opcion:"))
+            if opciondeinsetar == 1:
+                break
+            elif opciondeinsetar == 2:
+                break
+            else:
+                print("Numero incorecta")
+```
+#### dentro de esto voy a Borar. Da a usario input para escribe su valores despues escribe codigo para gurdar datos en Bases de datos
 
 
-
-
-
-
-
-
-
-
-
+##### Tabla de Categoria
+```
+if opciondeinsetar == 1:
+                print("Eliminamos un ")
+                id = input("Introduce el id del cliente que quieres eliminar: ")
+                cursor.execute('''
+                DELETE FROM Categoria
+                WHERE Identificador = '''+id+'''
+                ''')
+```
+##### Tabla de Pieza
+```
+if opciondeinsetar == 2:
+                print("Eliminamos un ")
+                id = input("Introduce el id del cliente que quieres eliminar: ")
+                cursor.execute('''
+                DELETE FROM Pieza
+                WHERE Identificador = '''+id+'''
+                ''')
+```
+       
 
 # Codigo Completo
 ## MYSQL
@@ -462,7 +490,6 @@ VALUES ('''+ Id_cat + ''',\'''' + titulo_c + '''\',\'''' + descripcion_c + '''\'
                 WHERE Identificador = '''+id+'''
                 ''')
                 
-                conexion.commit()
             if opciondeinsetar == 2:
                 print("Eliminamos un ")
                 id = input("Introduce el id del cliente que quieres eliminar: ")
