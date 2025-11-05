@@ -1,5 +1,5 @@
 # Introduce de la practica 
-
+En este practica de bases de datos vamos a trabajar a bases de datos relaciones es común trabajar con información distribuida en diferentes tablas.Usa este para facilitar la cinculta y organizacion de BD usamos `vistas` Una vista es una tabla virtual que no almacena datos de forma independiente, sino que se genera a partir del resultado de una consulta SQL.Esto permite combinar información de varias tablas y presentarla de una manera más clara y accesible, sin duplicar datos.
 #  Aplicación Práctica
 Cuando Mysql a installando esribe  `sudo mysql -u root -p` para conectar en la Mysql 
 
@@ -62,7 +62,21 @@ SELECT * FROM personas_correos;
 
 # Codigo completa 
 ```
+USE empresadam;
+DESCRIBE emails;
+DESCRIBE personas;
+CREATE VIEW personas_correos AS
+SELECT 
+    p.identificador AS id_persona,
+    p.nombre,
+    p.apellidos,
+    e.direccion AS correo
+FROM personas p
+LEFT JOIN emails e
+    ON p.identificador = e.persona;
+
+
 
 ```
 # Conclusión enlazando con la actividad 
-
+En esta actividad aprendimos a crear una vista para combinar información de dos tablas usando LEFT JOIN. La vista personas_correos nos permitió visualizar de forma sencilla los datos de personas y sus correos, demostrando cómo las vistas facilitan consultas y organización de información en bases de datos.
