@@ -1,9 +1,7 @@
 
 
 ## 1.-Indroduccion brece y contexalizacion
-
-
-
+En el presente trabajo se desarrollará un ejemplo práctico relacionado con el diseño y gestión de bases de datos. Para ello, se crearán dos tablas: `autores` y `entradas`, donde la tabla entradas contendrá una clave foránea `(Foreign Key)` que relacionará cada entrada con su autor correspondiente. Posteriormente, se insertarán datos en ambas tablas y se realizará una consulta utilizando `LEFT JOIN` para observar la relación entre ellas. Finalmente, se creará una vista `(VIEW)` que permitirá visualizar de manera más clara y estructurada la información combinada
 
 
 ## 2.-Desarrollo técnico correcto y preciso
@@ -225,3 +223,5 @@ SELECT * FROM vista_entradas;
 ```
 
 ## 4.-Cierre/Conclusión enlazando con la unidad
+
+La construcción y gestión de las tablas autores y entradas, junto con la definición de una clave foránea para relacionarlas, ha permitido comprender de forma práctica cómo se establecen y mantienen las relaciones dentro de una base de datos relacional. Además, el uso de consultas LEFT JOIN y la creación de una vista (VIEW) han facilitado la visualización integrada de los datos, mostrando cómo las relaciones permiten obtener información más completa y significativa. Este trabajo refuerza los contenidos de la unidad, especialmente en lo referente al diseño lógico, integridad referencial y consultas avanzadas en SQL, aspectos fundamentales para la administración eficiente de bases de datos.

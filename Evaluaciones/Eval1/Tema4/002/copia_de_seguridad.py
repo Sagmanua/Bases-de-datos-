@@ -3,12 +3,12 @@ from datetime import datetime
 
 ahora = datetime.now()
 
-anio = ahora.year.zfill(2)
-mes = ahora.month.zfill(2)
-dia = ahora.day.zfill(2)
-hora = ahora.hour.zfill(2)
-minuto = ahora.minute.zfill(2)
-segundo = ahora.second.zfill(2)
+anio = str(ahora.year).zfill(4)
+mes = str(ahora.month).zfill(2)
+dia = str(ahora.day).zfill(2)
+hora = str(ahora.hour).zfill(2)
+minuto = str(ahora.minute).zfill(2)
+segundo = str(ahora.second).zfill(2)
 
 usuario = "usuarioempresarial"
 password = "usuarioempresarial"

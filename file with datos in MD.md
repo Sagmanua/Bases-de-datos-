@@ -3,13 +3,13 @@ USE 003_Tipos_de_datos;
 sudo mysql -u root -p
 
 
-## 1.-Indroduccion brece y contexalizacion
+# 1.-Indroduccion brece y contexalizacion
 
 
 
 
 
-## 2.-Desarrollo técnico correcto y preciso
+# 2.-Desarrollo técnico correcto y preciso
 
 1.
 ```
@@ -40,13 +40,13 @@ sudo mysql -u root -p
   
 ```
 
-## Codigo Completo
+# Codigo Completo
 
 ```
 
 ```
 
-## 4.-Cierre/Conclusión enlazando con la unidad
+# 4.-Cierre/Conclusión enlazando con la unidad
 
 
 
