@@ -1,0 +1,8 @@
+Вам необходимо создать базу данных llamada portafolioexamen Crea dos tablas, piezasportafolio 
+(Identificador,titulo,descripcion,fecha,id_categoria), 
+и categoriasportafolio(Identificador, nombre) Crea claves Primarias, 
+y clave foranea para enlazar autores con piezas Inserta Регистры в таблицах
+Демонстрируйте, что можно вставить, просмотреть, актуализировать и у
+далить регистры Создайте крестовый выбор с 
+помощью LEFT JOIN и просмотрите эту неверную петицию Создайте пользователя 
+с разрешениями для доступа к этой базе данных
