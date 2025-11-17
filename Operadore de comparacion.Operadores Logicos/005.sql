@@ -1,0 +1,8 @@
+SELECT
+    nombre,
+    apellidos,
+    edad,
+    edad < 30 AS `Menor de 30 años`,
+    edad >= 30 AND edad < 40 AS `Entre 30 y 40 años`,
+    edad > 40 AS `Mayor de 40 años`
+FROM clientes;
