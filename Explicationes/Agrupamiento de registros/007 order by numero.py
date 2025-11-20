@@ -1,5 +1,5 @@
 import mysql.connector
-import matplotlib.pyplot as plt  # Debe ser pyplot, no solo matplotlib
+import matplotlib.pyplot as plt
 
 conexion = mysql.connector.connect(
     host="localhost",
@@ -13,21 +13,17 @@ cursor = conexion.cursor()
 cursor.execute(
     '''
     SELECT 
-        COUNT(color) AS numero,
-        color
+        COUNT(categoria) AS numero,
+        categoria
     FROM productos
-    GROUP BY color
-    ORDER BY COUNT(color) DESC;
+    GROUP BY categoria
+    ORDER BY numero DESC;
     '''
 )
 filas = cursor.fetchall()
 
-cantidades = []
-etiquetas = []
-
-for fila in filas:
-    cantidades.append(fila[0])
-    etiquetas.append(fila[1])
+cantidades = [fila[0] for fila in filas]
+etiquetas = [fila[1] for fila in filas]
 
 print(cantidades)
 print(etiquetas)
