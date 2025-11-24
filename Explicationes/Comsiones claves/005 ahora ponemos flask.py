@@ -11,11 +11,6 @@ conexion = mysql.connector.connect(
     database="tienda"
 )
 
-cursor = conexion.cursor() 
-cursor.execute("SELECT * FROM clientes;")  
-app = Flask(__name__)
-
-app = Flask(__name__)
 
 app = Flask(__name__)
 
