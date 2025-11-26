@@ -14,13 +14,13 @@
       <section>
         {% for linea in datos:%}
             <article>
-                <p>Asignatura{{linea['Nombre de la asignatura']}}</p>
-                <p>Nombre{{linea['Nombre de la alumno']}}</p>
-                <p>Apellidos{{linea['Nombre de la alumno']}}</p>
+                <p>Asignatura: {{ linea ['Nombre de la asignatura']}}</p>
+                <p>Nombre: {{ linea ['Nombre del alumno'] }}</p>
+                <p>Apellidos: {{ linea ['Apellidos del alumno'] }}</p>
+
 
             </article>
-        <th>{{columna}}</th>
-        {% endfor %}
+    {% endfor %}
           
     </main>
   </body>
