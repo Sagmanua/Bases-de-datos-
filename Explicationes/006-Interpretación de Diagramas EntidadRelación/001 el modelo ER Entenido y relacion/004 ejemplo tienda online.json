@@ -1,0 +1,144 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "entity",
+      "left": "246.984px",
+      "top": "80px",
+      "width": "",
+      "height": "",
+      "entityName": "Clientes",
+      "properties": [
+        {
+          "id": "prop-1",
+          "name": "id"
+        },
+        {
+          "id": "prop-3",
+          "name": "nombre"
+        },
+        {
+          "id": "prop-4",
+          "name": "apellido"
+        },
+        {
+          "id": "prop-5",
+          "name": "emial"
+        }
+      ]
+    },
+    {
+      "id": "forma-2",
+      "tipo": "entity",
+      "left": "470.484px",
+      "top": "96.25px",
+      "width": "",
+      "height": "",
+      "entityName": "Pedido",
+      "properties": [
+        {
+          "id": "prop-2",
+          "name": "id"
+        },
+        {
+          "id": "prop-6",
+          "name": "fecha"
+        },
+        {
+          "id": "prop-7",
+          "name": "cliente_id"
+        }
+      ]
+    },
+    {
+      "id": "forma-3",
+      "tipo": "entity",
+      "left": "403.833px",
+      "top": "274.722px",
+      "width": "",
+      "height": "",
+      "entityName": "ListaPedido",
+      "properties": [
+        {
+          "id": "prop-8",
+          "name": "id"
+        },
+        {
+          "id": "prop-12",
+          "name": "pedido_id"
+        },
+        {
+          "id": "prop-13",
+          "name": "productos_id"
+        }
+      ]
+    },
+    {
+      "id": "forma-4",
+      "tipo": "entity",
+      "left": "673.833px",
+      "top": "258.472px",
+      "width": "",
+      "height": "",
+      "entityName": "Productos",
+      "properties": [
+        {
+          "id": "prop-9",
+          "name": "id"
+        },
+        {
+          "id": "prop-10",
+          "name": "nombre"
+        },
+        {
+          "id": "prop-11",
+          "name": "precio"
+        }
+      ]
+    }
+  ],
+  "flechas": [
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": "prop-1",
+        "side": "right"
+      },
+      "hasta": {
+        "shapeId": "forma-2",
+        "propId": "prop-7",
+        "side": "left"
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-2",
+        "propId": "prop-2",
+        "side": "right"
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": "prop-12",
+        "side": "right"
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-4",
+        "propId": "prop-9",
+        "side": "left"
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": "prop-13",
+        "side": "right"
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    }
+  ]
+}
