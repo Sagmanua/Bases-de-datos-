@@ -1,3 +1,5 @@
+https://jocarsa.github.io/diagrama/
+
 Create DATABASE 003_Tipos_de_datos;
 USE 003_Tipos_de_datos;
 sudo mysql -u root -p
