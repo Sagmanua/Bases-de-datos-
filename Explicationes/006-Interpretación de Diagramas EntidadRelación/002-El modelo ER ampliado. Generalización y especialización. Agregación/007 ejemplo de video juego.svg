@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="889" height="448" viewBox="0 0 889 448">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-entity" x="234" y="40" width="220" height="157" />
+<line x1="234" y1="68" x2="454" y2="68" stroke="#e5e7eb" stroke-width="1"/>
+<text x="344" y="59" text-anchor="middle">NPC</text>
+<text x="330.453125" y="88.5">id</text>
+<text x="330.453125" y="113.5">posx</text>
+<text x="330.453125" y="138.5">posy</text>
+<text x="330.453125" y="163.5">posz</text>
+<rect class="shape-entity" x="40" y="301" width="220" height="82" />
+<line x1="40" y1="329" x2="260" y2="329" stroke="#e5e7eb" stroke-width="1"/>
+<text x="150" y="320" text-anchor="middle">Soldado</text>
+<text x="144.59375" y="349.5">id</text>
+<rect class="shape-entity" x="308" y="315" width="220" height="82" />
+<line x1="308" y1="343" x2="528" y2="343" stroke="#e5e7eb" stroke-width="1"/>
+<text x="418" y="334" text-anchor="middle">Francoridor</text>
+<text x="412.59375" y="363.5">id</text>
+<rect class="shape-entity" x="629" y="326" width="220" height="82" />
+<line x1="629" y1="354" x2="849" y2="354" stroke="#e5e7eb" stroke-width="1"/>
+<text x="739" y="345" text-anchor="middle">Ingeniero</text>
+<text x="733.59375" y="374.5">id</text>
+<path class="conn" d="M 275.86129753914986 197 L 185.5883668903803 301" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 368.45894736842104 197 L 405.22526315789474 315" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 454 187.7025316455696 L 673.8289738430583 326" marker-end="url(#arrow-end)" />
+</svg>
