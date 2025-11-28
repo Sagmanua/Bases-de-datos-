@@ -1,0 +1,75 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "rectangle",
+      "left": "178px",
+      "top": "123px",
+      "width": "",
+      "height": "",
+      "texto": "Entidad"
+    },
+    {
+      "id": "forma-2",
+      "tipo": "rectangle",
+      "left": "81px",
+      "top": "202px",
+      "width": "",
+      "height": "",
+      "texto": "Python"
+    },
+    {
+      "id": "forma-3",
+      "tipo": "rectangle",
+      "left": "275px",
+      "top": "207px",
+      "width": "",
+      "height": "",
+      "texto": "SQL"
+    }
+  ],
+  "flechas": [
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-2",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-2",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "doble",
+      "estilo": "straight"
+    }
+  ]
+}
