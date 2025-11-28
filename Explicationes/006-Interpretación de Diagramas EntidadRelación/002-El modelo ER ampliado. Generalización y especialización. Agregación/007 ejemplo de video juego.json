@@ -1,0 +1,120 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "entity",
+      "left": "304px",
+      "top": "142px",
+      "width": "",
+      "height": "",
+      "entityName": "NPC",
+      "properties": [
+        {
+          "id": "prop-1",
+          "name": "id"
+        },
+        {
+          "id": "prop-2",
+          "name": "posx"
+        },
+        {
+          "id": "prop-3",
+          "name": "posy"
+        },
+        {
+          "id": "prop-4",
+          "name": "posz"
+        }
+      ]
+    },
+    {
+      "id": "forma-2",
+      "tipo": "entity",
+      "left": "110px",
+      "top": "403px",
+      "width": "",
+      "height": "",
+      "entityName": "Soldado",
+      "properties": [
+        {
+          "id": "prop-5",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "id": "forma-3",
+      "tipo": "entity",
+      "left": "378px",
+      "top": "417px",
+      "width": "",
+      "height": "",
+      "entityName": "Francoridor",
+      "properties": [
+        {
+          "id": "prop-6",
+          "name": "id"
+        }
+      ]
+    },
+    {
+      "id": "forma-4",
+      "tipo": "entity",
+      "left": "699px",
+      "top": "428px",
+      "width": "",
+      "height": "",
+      "entityName": "Ingeniero",
+      "properties": [
+        {
+          "id": "prop-7",
+          "name": "id"
+        }
+      ]
+    }
+  ],
+  "flechas": [
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-2",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-4",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    }
+  ]
+}
