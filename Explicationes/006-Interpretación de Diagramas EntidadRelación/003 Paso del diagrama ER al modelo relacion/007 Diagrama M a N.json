@@ -1,0 +1,111 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "entity",
+      "left": "33px",
+      "top": "142px",
+      "width": "",
+      "height": "",
+      "entityName": "Alumno",
+      "properties": [
+        {
+          "id": "prop-1",
+          "name": "id"
+        },
+        {
+          "id": "prop-4",
+          "name": "nombre"
+        },
+        {
+          "id": "prop-5",
+          "name": "apellidos"
+        },
+        {
+          "id": "prop-6",
+          "name": "email"
+        }
+      ]
+    },
+    {
+      "id": "forma-2",
+      "tipo": "entity",
+      "left": "37px",
+      "top": "328px",
+      "width": "",
+      "height": "",
+      "entityName": "Asigntura",
+      "properties": [
+        {
+          "id": "prop-2",
+          "name": "id"
+        },
+        {
+          "id": "prop-10",
+          "name": "titulo"
+        },
+        {
+          "id": "prop-11",
+          "name": "descrpcion"
+        }
+      ]
+    },
+    {
+      "id": "forma-3",
+      "tipo": "entity",
+      "left": "271px",
+      "top": "172px",
+      "width": "",
+      "height": "",
+      "entityName": "Mantricula",
+      "properties": [
+        {
+          "id": "prop-3",
+          "name": "id"
+        },
+        {
+          "id": "prop-7",
+          "name": "id_alumno"
+        },
+        {
+          "id": "prop-8",
+          "name": "id_asignaturas"
+        },
+        {
+          "id": "prop-9",
+          "name": "atributo"
+        }
+      ]
+    }
+  ],
+  "flechas": [
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": "prop-1",
+        "side": "right"
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": "prop-7",
+        "side": "left"
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    },
+    {
+      "desde": {
+        "shapeId": "forma-2",
+        "propId": "prop-2",
+        "side": "right"
+      },
+      "hasta": {
+        "shapeId": "forma-3",
+        "propId": "prop-8",
+        "side": "left"
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="538" height="398" viewBox="0 0 538 398">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-entity" x="40" y="40" width="220" height="157" />
+<line x1="40" y1="68" x2="260" y2="68" stroke="#e5e7eb" stroke-width="1"/>
+<text x="150" y="59" text-anchor="middle">Alumno</text>
+<text x="124.34375" y="88.5">id</text>
+<text x="124.34375" y="113.5">nombre</text>
+<text x="124.34375" y="138.5">apellidos</text>
+<text x="124.34375" y="163.5">email</text>
+<rect class="shape-entity" x="44" y="226" width="220" height="132" />
+<line x1="44" y1="254" x2="264" y2="254" stroke="#e5e7eb" stroke-width="1"/>
+<text x="154" y="245" text-anchor="middle">Asigntura</text>
+<text x="122.859375" y="274.5">id</text>
+<text x="122.859375" y="299.5">titulo</text>
+<text x="122.859375" y="324.5">descrpcion</text>
+<rect class="shape-entity" x="278" y="70" width="220" height="157" />
+<line x1="278" y1="98" x2="498" y2="98" stroke="#e5e7eb" stroke-width="1"/>
+<text x="388" y="89" text-anchor="middle">Mantricula</text>
+<text x="347.234375" y="118.5">id</text>
+<text x="347.234375" y="143.5">id_alumno</text>
+<text x="347.234375" y="168.5">id_asignaturas</text>
+<text x="347.234375" y="193.5">atributo</text>
+<path class="conn" d="M 197.640625 86.31194234728895 L 325.234375 137.68805765271105" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 207.125 266.74732636754766 L 325.234375 168.25267363245234" marker-end="url(#arrow-end)" />
+</svg>

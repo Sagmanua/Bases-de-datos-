@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="824" height="427" viewBox="0 0 824 427">
+
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 12px; fill: #111827; }
+      .shape-rect { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-entity { fill: #ffffff; stroke: #111827; stroke-width: 2; }
+      .shape-circle { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-pill { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .shape-db { fill: #ffffff; stroke: #9ca3af; stroke-width: 1; }
+      .conn { stroke: #111827; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow-end" markerWidth="10" markerHeight="7" refX="10" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#111827"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="7" refX="0" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#111827"/>
+    </marker>
+  </defs>
+        
+<rect class="shape-entity" x="40" y="40" width="220" height="157" />
+<line x1="40" y1="68" x2="260" y2="68" stroke="#e5e7eb" stroke-width="1"/>
+<text x="150" y="59" text-anchor="middle">Cliente</text>
+<text x="124.34375" y="88.5">id</text>
+<text x="124.34375" y="113.5">nombre</text>
+<text x="124.34375" y="138.5">apellidos</text>
+<text x="124.34375" y="163.5">email</text>
+<rect class="shape-entity" x="280" y="61" width="220" height="132" />
+<line x1="280" y1="89" x2="500" y2="89" stroke="#e5e7eb" stroke-width="1"/>
+<text x="390" y="80" text-anchor="middle">Pedido</text>
+<text x="363.0625" y="109.5">id</text>
+<text x="363.0625" y="134.5">cliente_id</text>
+<text x="363.0625" y="159.5">fecha</text>
+<rect class="shape-entity" x="257" y="280" width="220" height="107" />
+<line x1="257" y1="308" x2="477" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="367" y="299" text-anchor="middle">Productos</text>
+<text x="344.421875" y="328.5">id</text>
+<text x="344.421875" y="353.5">nombre</text>
+<rect class="shape-entity" x="564" y="68" width="220" height="157" />
+<line x1="564" y1="96" x2="784" y2="96" stroke="#e5e7eb" stroke-width="1"/>
+<text x="674" y="87" text-anchor="middle">ListaPedido</text>
+<text x="636.71875" y="116.5">id</text>
+<text x="636.71875" y="141.5">id_pedido</text>
+<text x="636.71875" y="166.5">id_productos</text>
+<text x="636.71875" y="191.5">candidat</text>
+<path class="conn" d="M 197.640625 85.8580727831881 L 341.0625 129.1419272168119" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 500 73.77918424753867 L 429.9375 107.67721518987341" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 350.0625 106.0262076053443 L 614.71875 136.9737923946557" marker-end="url(#arrow-end)" />
+<path class="conn" d="M 411.5625 321.06385329209013 L 614.71875 165.93614670790984" marker-end="url(#arrow-end)" />
+</svg>
