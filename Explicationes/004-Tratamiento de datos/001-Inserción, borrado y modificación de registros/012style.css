@@ -1,0 +1,7 @@
+body,html{width:100%;height:100%;font-family:sans-serif;}
+body{display:flex;flex-direction:column;background:lightgrey;
+justify-content:center;align-items:center;}
+header,main,footer{background:white;width:800px;padding:20px;}
+table{border:2px solid lightgray;padding:10px;}
+form{columns:2;}
+form input{padding:10px;margin:10px;width:100%;box-sizing:border-box;}
