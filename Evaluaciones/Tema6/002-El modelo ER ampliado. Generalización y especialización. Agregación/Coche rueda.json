@@ -1,0 +1,57 @@
+{
+  "formas": [
+    {
+      "id": "forma-1",
+      "tipo": "rectangle",
+      "left": "105px",
+      "top": "132px",
+      "width": "",
+      "height": "",
+      "texto": "Coche"
+    },
+    {
+      "id": "forma-2",
+      "tipo": "rectangle",
+      "left": "353px",
+      "top": "130px",
+      "width": "",
+      "height": "",
+      "texto": "Rueda"
+    }
+  ],
+  "flechas": [
+    {
+      "desde": {
+        "shapeId": "forma-1",
+        "propId": null,
+        "side": null
+      },
+      "hasta": {
+        "shapeId": "forma-2",
+        "propId": null,
+        "side": null
+      },
+      "tipo": "simple",
+      "estilo": "straight"
+    }
+  ],
+  "relaciones": [
+    {
+      "nombre": "tiene_ruedas",
+      "tipo": "agregacion",
+      "entidad_principal": "Coche",
+      "entidades_partes": ["Rueda"]
+    },
+    {
+      "nombre": "tiene_libros",
+      "tipo": "agregacion",
+      "entidad_principal": "Biblioteca",
+      "entidades_partes": ["Libro"]
+    },
+    {
+      "nombre": "escrito_por",
+      "tipo": "relacion_normal",
+      "entidades_involucradas": ["Libro", "Autor"]
+    }
+  ]
+}
