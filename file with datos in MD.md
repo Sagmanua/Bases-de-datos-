@@ -14,36 +14,17 @@ sudo mysql -u root -p
 # 2.-Desarrollo técnico correcto y preciso
 
 1.
-```
 
-```
-
-2.
-```
-
-       
-```
-3.
-```
-
-```
-4.
-```
- 
-
-```
-5.
-```
- 
-
-```
-6.
-```
-  
-```
 
 # Codigo Completo
-
+Project\  
+├─ explicacion.md 
+├─ 007-plantilla python mysql.py  
+├─ 014-categorias.py  
+├─ 016-grafico de barra.py  
+├─ 017-colores.py  
+└─ crear_productos.sql  
+##
 ```
 
 ```

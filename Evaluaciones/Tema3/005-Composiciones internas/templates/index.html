@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+   <head>
+       <style>
+           html,body{height:100%;padding:0px;margin:0px;display:flex;width:100%;}
+           nav{background:indigo;flex:1;color:white;padding:20px;}
+           section{flex:3;background:#f4f4f9;padding:20px;}
+       </style>
+   </head>
+   <body>
+       <nav>Menu</nav>
+       <section>
+           <h1>Clientes</h1>
+           <ul id="clientes"></ul>
+       </section>
+
+       <script>
+           fetch('/clientes')
+               .then(response => response.json())
+               .then(data => {
+                   const clientes = document.getElementById('clientes');
+                   data.forEach(cliente => {
+                       clientes.innerHTML += `<li>${cliente.nombre} - ${cliente.email}</li>`;
+                   });
+               });
+
+           fetch('/tablas')
+               .then(response => response.json())
+               .then(data => {
+                   console.log(data);
+               });
+       </script>
+   </body>
+</html>
