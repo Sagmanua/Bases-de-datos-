@@ -19,6 +19,13 @@ Hasta 7 = Tienes permiso para todo
 6	r w –	4+2+0 si r, si w, no x
 7	r w x	4+2+1 si a todo
 
+sudo chmod 777 -R /carpeta/subcarpeta
+sudo = super usuario hace
+chmod = cambio permisos de carpeta
+777 la combinación de permisos
+-R recursivo a los contenidos de la carpeta
+/carpeta = ruta a la carpeta que vas a afectar
+
 
 
 
