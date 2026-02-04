@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas { border:1px solid gray; }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+      lienzo.width = 256;
+      lienzo.height = 256;
+
+      contexto.textAlign = "center";
+      contexto.textBaseline = "middle"; // para centrar mejor el texto
+      contexto.fillText("Este es el título de la gráfica", 128, 20);
+
+      const datos = [34, 45, 78, 12, 56, 98, 14, 65, 87, 32];
+
+      let suma = datos.reduce((acc, val) => acc + val, 0);
+
+      let cursor = 0;
+
+      datos.forEach(dato => {
+        const cacho = dato / suma;
+
+        // Color aleatorio
+        const rojo = Math.round(Math.random() * 255);
+        const verde = Math.round(Math.random() * 255);
+        const azul = Math.round(Math.random() * 255);
+        contexto.fillStyle = `rgb(${rojo},${verde},${azul})`;
+
+        // Ángulos
+        const inicio = Math.PI * 2 * cursor;
+        const fin = Math.PI * 2 * (cursor + cacho);
+
+        // Dibujar sector
+        contexto.beginPath();
+        contexto.moveTo(128, 128);
+        contexto.arc(128, 128, 100, inicio, fin);
+        contexto.closePath();
+        contexto.fill();
+
+        // Dibujar valor
+        contexto.fillStyle = "black";
+        const anguloMedio = cursor + cacho / 2;
+        const textoX = 128 + 50 * Math.cos(anguloMedio * Math.PI * 2);
+        const textoY = 128 + 50 * Math.sin(anguloMedio * Math.PI * 2);
+        contexto.fillText(dato, textoX, textoY);
+
+        cursor += cacho;
+      });
+    </script>
+  </body>
+</html>

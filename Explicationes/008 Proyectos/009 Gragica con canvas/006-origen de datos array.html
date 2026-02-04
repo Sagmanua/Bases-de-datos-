@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid gray;}
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+        let lienzo = document.querySelector("canvas");
+        let contexto = lienzo.getContext("2d");
+        lienzo.width = 256
+        lienzo.height = 256
+        let datos = [34,45,78,12,56,98,14,65,87,32]
+
+        let suma = 0 
+        datos.forEach(function(dato) {
+            suma += dato
+        });
+        console.log(suma)
+        
+        let cusror = 0
+
+        // Cacho 
+        datos.forEach(function(dato){
+            let cacho = dato / suma;
+            let rojo = Math.round(Math.random()*255)
+            let verde = Math.round(Math.random()*255)
+            let azul = Math.round(Math.random()*255)
+
+            contexto.fillStyle = "rgb("+rojo+","+verde+","+azul+")"
+            contexto.beginPath()
+            contexto.moveTo(128,128)
+            contexto.arc(128,128,100, 2*Math.PI*cusror, 2*Math.PI*(cusror+cacho))
+            contexto.lineTo(128,128)
+            contexto.fill()
+            cusror += cacho
+        
+
+        })
+        
+
+    </script>
+  </body>
+</html>
